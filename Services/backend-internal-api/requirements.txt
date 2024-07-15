@@ -1,0 +1,6 @@
+###### Current Requirements ###### 
+flask >= 2.2.2
+psycopg2 >= 2.9.5
+requests >= 2.26.0
+python-crontab >= 2.7.1
+argparse >= 1.4.0

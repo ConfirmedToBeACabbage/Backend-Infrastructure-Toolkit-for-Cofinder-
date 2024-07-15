@@ -1,0 +1,55 @@
+version: "3"
+
+services: 
+  pg: 
+    image: postgres:latest
+    restart: "always"
+    expose:
+      - "5432"
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment: 
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes: 
+      - "./Services/backend-db/db/data:/var/lib/postgresql/data"
+      - "./Services/backend-db/db/init:/docker-entrypoint-initdb.d" 
+    networks: 
+      - default
+
+  api:
+    image: python:3.7
+    restart: "always"
+    expose:
+      - "29170"
+    ports:
+      - "127.0.0.1:29170:5000"
+    build: ./Services/backend-internal-api
+    networks: 
+      - default
+
+  django:
+    image: python:3.6
+    restart: "always"
+    expose:
+      - "29990"
+    ports:
+      - "127.0.0.1:29990:5000"
+    build: ./Services/backend-ingest-data
+    networks: 
+      - default
+    depends_on: 
+      - pg
+
+  flask:
+    image: python:3.9
+    restart: "always"
+    expose:
+      - "29998"
+    ports:
+      - "29998:5000"
+    build: ./Services/backend-flask
+    networks: 
+      - default
+    
+    
+      
