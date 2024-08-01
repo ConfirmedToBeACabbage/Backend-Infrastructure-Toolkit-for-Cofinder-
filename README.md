@@ -10,34 +10,36 @@ A robust and modular backend infrastructure toolkit designed for scalable and ma
 - **Dockerized Services**: All components are containerized for ease of deployment and consistency.
 
 ## Project Structure
-.
-├── docker-swarm-compose
-├── Services
-│ ├── backend-db
-│   ├── db
-│   │ └── init.sql
-│   ├── clean.bat
-│   ├── clean.sh
-│   └── Dockerfile
-│ ├── backend-flask
-│   ├── Dockerfile
-│   ├── README
-│   ├── requirements
-│   └── server.py
-│ ├── backend-ingest-data
-│   ├── Dockerfile
-│   └── (Django-related files)
-│ ├── backend-internal-api
-│   ├── Jobs
-│     ├── PUSHDATA_JOB.py
-│     └── file.txt
-│   ├── Dockerfile
-│   ├── API.py
-│   ├── cronjob.py
-│   ├── pgconn.py
-│   ├── Dockerfile
-│   └── tmmanage.py
-└── README.md
+   ```
+   .
+   ├── docker-swarm-compose
+   ├── Services
+   │ ├── backend-db
+   │   ├── db
+   │   │ └── init.sql
+   │   ├── clean.bat
+   │   ├── clean.sh
+   │   └── Dockerfile
+   │ ├── backend-flask
+   │   ├── Dockerfile
+   │   ├── README
+   │   ├── requirements
+   │   └── server.py
+   │ ├── backend-ingest-data
+   │   ├── Dockerfile
+   │   └── (Django-related files)
+   │ ├── backend-internal-api
+   │   ├── Jobs
+   │     ├── PUSHDATA_JOB.py
+   │     └── file.txt
+   │   ├── Dockerfile
+   │   ├── API.py
+   │   ├── cronjob.py
+   │   ├── pgconn.py
+   │   ├── Dockerfile
+   │   └── tmmanage.py
+   └── README.md
+   ```
 
 ## Getting Started
 
@@ -53,11 +55,13 @@ A robust and modular backend infrastructure toolkit designed for scalable and ma
    ```bash
    git clone <repository-url>
    cd <repository-directory>
+   ```
 
 2. **Start the Services**
    
    ```
    Use Docker Swarm to start all services: docker-compose -f docker-swarm-compose.yml up
+   ```
 
 Service Descriptions
 
