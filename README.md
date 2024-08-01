@@ -1,6 +1,13 @@
 # Comprehensive Backend Services Suite
 
-A robust and modular backend infrastructure toolkit designed for scalable and maintainable backend systems. This suite includes API management, database interactions, and cron job scheduling, all containerized using Docker.
+An integrated backend infrastructure toolkit developed for a cofinder use case, featuring a suite of modular tools designed for scalable and maintainable backend systems. This toolkit encompasses:
+
+    API Management: A Flask-based API framework for efficient request handling and service integration.
+    Database Interactions: Tools for PostgreSQL database management, including connection handling, query execution, and user management.
+    Cron Job Scheduling: A robust cron job manager for automated task scheduling and execution.
+    Docker Integration: Comprehensive containerization of all components using Docker, ensuring easy deployment and scalability.
+
+The project leverages Docker Compose for orchestration, facilitating seamless integration and operation across multiple services including Flask, Django, and PostgreSQL.
 
 ## Features
 
